@@ -1,0 +1,72 @@
+// .app-header {
+//   padding: 0 25px;
+//   height: 80px;
+//   background-color: rgb(247, 230, 230);
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   nav {
+//     display: flex;
+//     justify-content: center;
+//     gap: 10px;
+//     .active-nav {
+//       color: red;
+//     }
+//   }
+// }
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  height: 100vh;
+  pointer-events: none;
+  cursor: pointer;
+  width: 100vw;
+  &.screen-open {
+    pointer-events: all;
+    background-color: gray;
+  }
+}
+.app-header-container {
+  background-color: $clr2;
+  height: 50px;
+  .app-header {
+    color: white;
+  }
+  .burger-menu {
+    font-size: 2rem;
+    padding-inline-end: 10px;
+  }
+  .navbar-container {
+    position: fixed;
+    right: 0;
+    top: 50px;
+    width: 200px;
+    height: 100vh;
+    background-color: $clr2;
+    color: white;
+    transform: translateX(100%);
+    transition: all 1s;
+    &.open {
+      transform: translateX(0);
+    }
+    .navbar > * {
+      height: 50px;
+      width: 100%;
+      font-size: 1.2rem;
+    }
+    .navbar-item {
+      // border-bottom: 0.5px solid white;
+      button {
+        height: 100%;
+        width: 100%;
+        background-color: inherit;
+        font-size: 1.2rem;
+        color: white;
+      }
+    }
+    .navbar-item:hover {
+      background-color: lighten($color: $clr2, $amount: 20%);
+    }
+  }
+}

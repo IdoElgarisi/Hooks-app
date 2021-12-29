@@ -1,0 +1,23 @@
+.robot-preview {
+  padding: 10px;
+  box-shadow: 0 0 4px 1px #0000003b;
+  cursor: pointer;
+  > p {
+    text-align: center;
+
+    &:nth-of-type(2) {
+      font-size: 13px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+
+    button {
+      margin-top: 10px;
+    }
+  }
+}
